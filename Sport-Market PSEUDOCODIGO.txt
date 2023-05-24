@@ -1,0 +1,112 @@
+______________________________________________________________________________________________________________________________________
+
+PSEUDOCODIGO (SPORT-MARKET)
+
+FUNCION:(Menú Inicial)
+/*Esta primera tarea sera la base sobre lo que gire todo
+debe tener las siguientes opciones elegibles:
+«no introducir en el menu el texto en parentesis»*/
+
+
+FUNCION:	MENU:"	------------------TIENDA: "SPORT-MARKET" (CATALOGO) --------------------
+
+					-Bienvenida (Texto inicial de bienvenida)
+					-Buscador (Se especifica en otra tarea)
+					-Categorias (se especifica en otra tarea)
+					-Descuentos (Propaganda o SPAM del tipo)
+					-Manual de uso (de momento vacio hasta que se especifique)
+					-Salir (seleccionada esta opcion se debe cerrar el codigo)
+
+				------------------------------------------------------------------------"
+
+	/*La lista de opciones solo debe poder visualizarse, y 
+	mostrara su contenido tras ser seleccionada. */
+
+	
+	FUNCION: 	Opcion 1 -Bienvenida:
+		MOSTRAR: "BIENVENIDA"
+			"..........."
+		/*Este apartado debe solo tener en su interior una bienvenida de
+		la tienda que presente al catalogo y los beneficios y 
+		servicios de la tienda.
+		No debe hacer mas que mostrar texto que no sobre pase las 
+		50-80 palabras Y algun otro contenido que el cliente requiera*/
+		
+
+	FUNCION:	Opcion 2 -Buscador:
+		MOSTRAR: " Inserte el codigo del producto
+				------
+				tambien puede ingresar una de las otras opciones
+				0) volver
+				1) salir	"
+	FUNCION:	OPCION 3 -Categorias:
+		MOSTRAR: "-----------------------------------------------------
+				ELIGE LA CATEGORIA QUE TE INTERESA:
+					1: CAMISETAS
+  					2: JEAN
+   					3: ZAPATOS
+  					4: ACCESORIOS
+   					0: VOLVER AL MENU INICIAL
+			-----------------------------------------------------"
+	/*	Para dar inicio a este apartado se debe iniciar con un proceso anterior:
+		-Se debe crear un formato de salida, donde se pueda visualizar:
+		*nombre_del_producto, *precio del producto(dolar/bolivianos), *stock del producto, Codigo_de_producto */
+	FUNCION: ARTICULO:
+
+		/*	+El nombre del producto en mayuscula, con guiones bajo entre espacio "_" .
+			+El precio del articulo debe presentarse en bolivianos y dolar.
+			+Un stock (cantidad de producto) de momento un valor fijo.
+			+Al momento de crearse un articulo, se le debe añadir un codigo identificador
+			unico ( de preferencia numeral "#1000111").
+			+Los datos solicitados deberan presentarse en este sistema:	*/
+	_________________________________________________________
+		 _________________________________________
+	      							
+	      	Nombre: (NOMBRE_DEL_PRODUCTO)    	
+				Stock: (STOCK)		
+		 		Bs. (PRECIO_BS)		
+				$. (PRECIO_DOLAR)		
+			codigo: (CODIGO_ID)		
+		_________________________________________
+	__________________________________________________________
+
+
+	/*Se pondra la opcion de poder sellecionar uno de los productos mostrados, donde se debera mostarar lo sgte: */
+	/*  Una vez ingresado el codigo , si se ingreso correctamente, se debe dar de salida el producto o articulo; 
+	si se ingreso un codigo inexistente o erroneo, mostrar error y que se pueda ingresar el codigo nuevamente.  */
+			FUNCION: ARTICULO_SELECT: 
+			MOSTRAR: 	"Para la adquisicion del producto, pongase en contacto con nuestra
+					Tienda ESTILO SPORT para la adquisicion del producto"<<endl;
+					Contacto: +591 78425610 Whatsapp
+					Codigo de serie del producto seleccionado: <<SERIE<<"
+
+	FUNCION:	Opcion 4 -ADMINISTRADOR: 
+	/* Esta opcion, sera usada para desbloquear los beneficios de administrador, para modificaciones y alteraciones de productos en el almacen
+	para esto se debera crear usuarios_administradores que puedan ingresar a la base de datos */
+		MOSTRAR:	"Ingrese su usuario y contraseña por favor: "
+		LEER:	-USUARIO
+			-CONTRASEÑA
+
+	FUNCION:	Opcion 5 -Manual de Uso:
+	/* Se mostrara la manera correcta de como utilizar el sistema, pero no sera definido hasta que el proyecto haya sido aprovado por el cliente */
+		MOSTRAR:	"	MANUAL DE USO
+					.....  
+					Contactos: ....	"
+
+	FUNCION:	evalua (valor1,valor2,opcion1){
+  		  MIENTRAS((opcion1<valor1) || (opcion1>valor2)){
+     		  MOSTRAR: "Opcion NO disponible, vuelve a ingresar: "
+       		LEER: opcion1
+        		RETORNAR: opcion1
+
+	FUNCION: Opcion 6:
+		continuar.
+
+
+FIN DEL PROGRAMA		
+
+/*	CONDICIONAL IMPORTANTE: una vez terminado todas las fases, se debe poder unir todo y colocar escenarios donde se pueda 
+	cambiar al menu anterior en todas las opciones sea cual sea la seleccion del usuario.
+	Dicho esto , cada opcion desde el menu principal debe añadirsele un boton " -VOLVER " para regresar a la opcion anterior sea cual sea la opcion a la que haya entrado el usuario. */
+
+__________________________________________________________________________________________________________________________________________
